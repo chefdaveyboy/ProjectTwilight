@@ -21,8 +21,26 @@ $("#start-button").on("click", function(){
 
     for (var i = 0; i < playercount; i++) {
         players.push(prompt("Who is player " + (i+1)));
-        }
 
-        console.log(players);
+
+        $("#players").append("<div class='player-card'> <p>" + players[i] + " </p><button class='add-point'>Add Point</button><button class='subtract-point'>Subtract Point</button></div>");
         
+        
+
+    
+    
+    }
+    
+    console.log(players);
+
+    
+        
+
+        
+      
 });
+
+
+
+
+
