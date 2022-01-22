@@ -3,6 +3,12 @@ var colors =["Green", "Blue", "Yellow", "Red", "Purple", "Black"];
 
 var speaker = "";
 var players = [];
+// var vpoints1 = 0;
+// var vpoints2 = 0;
+// var vpoints3 = 0;
+// var vpoints4 = 0;
+// var vpoints5 = 0;
+// var vpoints6 = 0;
 
 
 $("#change-speaker").on("click", function(){
@@ -20,25 +26,114 @@ $("#start-button").on("click", function(){
     console.log(playercount);
 
     for (var i = 0; i < playercount; i++) {
+        var vpoints = 0;
+        var vpoints0 = 0;
+        var vpoints1 = 0;
+        var vpoints2 = 0;
+        var vpoints3 = 0;
+        var vpoints4 = 0;
+        var vpoints5 = 0; 
         players.push(prompt("Who is player " + (i+1)));
-
-
-        $("#players").append("<div class='player-card'> <p>" + players[i] + " </p><button class='add-point'>Add Point</button><button class='subtract-point'>Subtract Point</button></div>");
         
+        $("#players").append("<div class='player-card'> <p> Player Name: " + players[i] + " </p><p id='vpoints" + [i] + "'>Victory Points: "+ vpoints +"</p><button id='add-point"+[i]+"'>Add Point</button><button id='subtract-point"+[i]+"'>Subtract Point</button></div>");
         
-
-    
-    
     }
-    
-    console.log(players);
 
-    
-        
+//ADD BUTTON FUNCTIONS
 
+    $("#add-point0").on("click", function(){
+        console.log("click");
+        vpoints0++;
+        console.log(vpoints0);
+        $("#vpoints0").text("Victory Points: " + vpoints0);
+        });
+
+    $("#add-point1").on("click", function(){
+        console.log("click");
+        vpoints1++;
+        console.log(vpoints1);
+        $("#vpoints1").text("Victory Points: " + vpoints1);
+        });
+
+    $("#add-point2").on("click", function(){
+        console.log("click");
+        vpoints2++;
+        console.log(vpoints2);
+        $("#vpoints2").text("Victory Points: " + vpoints2);
+        });
+
+    $("#add-point3").on("click", function(){
+        console.log("click");
+        vpoints3++;
+        console.log(vpoints3);
+        $("#vpoints3").text("Victory Points: " + vpoints3);
+        });
+
+    $("#add-point4").on("click", function(){
+        console.log("click");
+        vpoints4++;
+        console.log(vpoints4);
+        $("#vpoints4").text("Victory Points: " + vpoints4);
+        });
         
-      
+    $("#add-point5").on("click", function(){
+        console.log("click");
+        vpoints5++;
+        console.log(vpoints5);
+        $("#vpoints5").text("Victory Points: " + vpoints5);
+        });
+
+
+//SUBTRACT BUTTON FUNCTIONS
+
+    $("#subtract-point0").on("click", function(){
+        console.log("click");
+        vpoints0--;
+        console.log(vpoints0);
+        $("#vpoints0").text("Victory Points: " + vpoints0);
+        });
+
+    $("#subtract-point1").on("click", function(){
+        console.log("click");
+        vpoints1--;
+        console.log(vpoints1);
+        $("#vpoints1").text("Victory Points: " + vpoints1);
+        });
+
+    $("#subtract-point2").on("click", function(){
+        console.log("click");
+        vpoints2--;
+        console.log(vpoints2);
+        $("#vpoints2").text("Victory Points: " + vpoints2);
+        });
+
+    $("#subtract-point3").on("click", function(){
+        console.log("click");
+        vpoints3--;
+        console.log(vpoints3);
+        $("#vpoints3").text("Victory Points: " + vpoints3);
+        });
+
+    $("#subtract-point4").on("click", function(){
+        console.log("click");
+        vpoints4--;
+        console.log(vpoints4);
+        $("#vpoints4").text("Victory Points: " + vpoints4);
+        });
+        
+    $("#subtract-point5").on("click", function(){
+        console.log("click");
+        vpoints5--;
+        console.log(vpoints5);
+        $("#vpoints5").text("Victory Points: " + vpoints5);
+        });
+
+
+    console.log(vpoints);
+    console.log(players);     
 });
+
+
 
 
 
