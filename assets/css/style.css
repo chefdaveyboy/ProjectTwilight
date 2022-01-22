@@ -1,4 +1,10 @@
+@font-face {
+    font-family: "HandelGothic";
+    src: url("../Font/Handel-Gothic-D-Bold.otf") format("opentype");
+}
+
 body {
+    font-family: "HandelGothic";
     background-image: url(../images/space_background.jpg);
     background-size: cover;
     color: white;
@@ -15,4 +21,45 @@ h1 {
     font-size: 30px;
     margin-top: 60px;
 
+}
+
+#speaker-div {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    outline-style: double;
+    outline-color: red;
+    outline-width: 5px;
+    border-radius: 20px;
+    color: red;
+    margin-right: 550px;
+    margin-left: 550px;
+
+}
+
+#speaker {
+    padding-top: 20px;
+}
+
+#change-speaker {
+    margin-bottom: 20px;
+}
+
+#players {
+    display: flex;
+    text-align: center;
+}
+
+.player-card {
+    color: gold;
+    font-size: 30px;
+    background-color: black;
+    border-radius: 15px 50px 15px 50px;
+    flex: 1;
+    margin: 50px;
+}
+
+#add-point0, #add-point1, #add-point2, #add-point3, #add-point4, #add-point5 {
+    margin-bottom: 50px;
+    margin-right: 20px;
 }
