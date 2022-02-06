@@ -24,6 +24,7 @@ h1 {
 }
 
 #speaker-div {
+    display: none;
     text-align: center;
     font-size: 30px;
     font-weight: bolder;
@@ -32,13 +33,22 @@ h1 {
     outline-width: 5px;
     border-radius: 20px;
     color: red;
+    margin-top: 10px;
+    margin-bottom: 0px;
     margin-right: 550px;
     margin-left: 550px;
+    padding: 5px;
 
 }
 
 #speaker {
-    padding-top: 20px;
+    font-size: 30px;
+    margin: 10px;
+    
+}
+
+#current-sp {
+    margin: 0px;
 }
 
 #change-speaker {
@@ -51,9 +61,11 @@ h1 {
 }
 
 .player-card {
-    color: gold;
-    font-size: 30px;
+    color: white;
     background-color: black;
+    outline-width: 10px;
+    outline-style: solid;
+    font-size: 20px;
     border-radius: 15px 50px 15px 50px;
     flex: 1;
     margin: 50px;
@@ -62,4 +74,42 @@ h1 {
 #add-point0, #add-point1, #add-point2, #add-point3, #add-point4, #add-point5 {
     margin-bottom: 50px;
     margin-right: 20px;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 8px;
+    font-family: "HandelGothic";
+    padding: 8px;
 }
+
+#subtract-point0, #subtract-point1, #subtract-point2, #subtract-point3, #subtract-point4, #subtract-point5 {
+    margin-bottom: 50px;
+    margin-right: 20px;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 8px;
+    font-family: "HandelGothic";
+    padding: 8px;
+}
+
+
+#start-button {
+    background-color: white;
+    border: none;
+    font-size: 30px;
+    border-radius: 12px;
+    font-family: "HandelGothic";
+    padding: 10px;
+
+}
+
+#change-speaker {
+    background-color: red;
+    border: none;
+    font-size: 20px;
+    border-radius: 12px;
+    font-family: "HandelGothic";
+    padding: 10px;
+}
+

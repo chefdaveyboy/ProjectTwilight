@@ -1,8 +1,10 @@
-var factions = ["The Arborec", "The Barony of Letnev", "The Clan of Saar", "The Embers of Muaat", "The Emirates of Hacan", "The Federation of Sol", "The Ghosts of Creuss", "The Mentak Coalition", "The Naalu Collective", "The Nekro Virus", "Sadakk N'orr", "The Universities of Jol-Nar", "The Winnu", "The Xxcha Kingdom", "The Yin Brotherhood", "The Yssaril Tribes"];
-var colors =["Green", "Blue", "Yellow", "Red", "Purple", "Black"];
+// var factions = ["The Arborec", "The Barony of Letnev", "The Clan of Saar", "The Embers of Muaat", "The Emirates of Hacan", "The Federation of Sol", "The Ghosts of Creuss", "The Mentak Coalition", "The Naalu Collective", "The Nekro Virus", "Sadakk N'orr", "The Universities of Jol-Nar", "The Winnu", "The Xxcha Kingdom", "The Yin Brotherhood", "The Yssaril Tribes"];
+// var colors =["Green", "Blue", "Yellow", "Red", "Purple", "Black"];
 
 var speaker = "";
 var players = [];
+var factions =[];
+var colors = [];
 // var vpoints1 = 0;
 // var vpoints2 = 0;
 // var vpoints3 = 0;
@@ -14,12 +16,13 @@ var players = [];
 $("#change-speaker").on("click", function(){
     speaker = prompt("Who is the speaker?");
 
-    $("#speaker").text("Current Speaker: " + speaker);
+    $("#speaker").text(speaker);
 });
 
 $("#start-button").on("click", function(){
 
     $("#welcome").hide();
+    $("#speaker-div").toggle();
 
     var playercount = prompt("How many players are there?");
 
@@ -33,9 +36,15 @@ $("#start-button").on("click", function(){
         var vpoints3 = 0;
         var vpoints4 = 0;
         var vpoints5 = 0; 
-        players.push(prompt("Who is player " + (i+1)));
         
-        $("#players").append("<div class='player-card'> <p> Player Name: " + players[i] + " </p><p id='vpoints" + [i] + "'>Victory Points: "+ vpoints +"</p><button id='add-point"+[i]+"'>Add Point</button><button id='subtract-point"+[i]+"'>Subtract Point</button></div>");
+        players.push(prompt("Who is player " + (i+1) + "?"));
+        factions.push(prompt("What faction is player " + (i+1) +"?" ));
+        colors.push(prompt("What color is player " + (i+1) + "?"));
+
+        
+
+        
+        $("#players").append("<div class='player-card' style ='outline-color: " + colors[i] + "'> <p>" + players[i] + " </p><p>" + factions[i] + "</p><p id='vpoints" + [i] + "'>Victory Points: "+ vpoints +"</p><button id='add-point"+[i]+"'>Add Point</button><button id='subtract-point"+[i]+"'>Subtract Point</button></div>");
         
     }
 
